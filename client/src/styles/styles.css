@@ -1,0 +1,525 @@
+html {
+  font-family: Targetica, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  text-size-adjust: 100%;
+}
+
+.containerRC {
+  font-size: 14px important;
+  max-width: 1400px;
+  margin: 30px auto 30px auto;
+  border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.heading {
+  justify-content: center;
+  text-align: center;
+  font-family: "Helvetica for Target", HelveticaForTarget, Targetica, "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  line-height: 1.25;
+  font-size: 23px;
+  margin: 0px 0px 8px;
+}
+
+.review {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4285;
+  color: rgb(51, 51, 51);
+  font-family: Targetica, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: block;
+}
+
+.reviewBtn {
+  position: relative;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  user-select: none;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.42857;
+  color: rgb(255, 255, 255);
+  background-color: rgb(204, 0, 0);
+  border-width: 1px;
+  border-style: solid;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border-color: rgb(204, 0, 0);
+}
+
+.list {
+  padding: 20px;
+  margin: 16px 0px 16px 0px;
+  text-align: left;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(214, 214, 214);
+  border-image: initial;
+  border-radius: 4px;
+}
+
+.title {
+  font-family: "Helvetica for Target", HelveticaForTarget, Targetica, "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  line-height: 1.25;
+  font-size: 16px;
+  margin: 0px 0px 8px;
+  outline: 0px;
+}
+
+.star {
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  height: 18px;
+  width: 90px;
+}
+
+.timebox {
+  margin-top: 4px;
+  font-size: 12px;
+  outline: 0px;
+  display: block;
+}
+
+.itemReview {
+  margin-top: 16px !important;
+}
+
+/* css for HEADER-STATS container */
+.header-stats-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 16px auto 16px auto;
+}
+
+/* css for header-progress-bar */
+.header-progress-bar {
+  font-size: 14px;
+  width: 340px;
+  cursor: pointer;
+  margin:2px 20px 2px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.star-name {
+  font-size: 12px;
+}
+
+.progress-bar {
+  position: relative;
+  background-color: rgb(247, 247, 247);
+  height: 8px;
+  width: 210px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.star-percentage {
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+}
+
+.filler {
+  background-color: rgb(0, 131, 0);
+  height: 100%;
+  border-radius: inherit;
+  transition: width .2s ease-in;
+}
+
+
+
+/* css for header-star-rating */
+.header-star-rating {
+  width: 120px;
+  box-sizing: border-box;
+  margin-left: 4px ;
+  margin-right: 4px ;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.star-average {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.header-stars {
+  padding-left: 25px;
+}
+
+.total-stars {
+  text-align: center;
+  margin: -1px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+
+
+
+/* css for header-circular-bar */
+.header-circular-bar {
+  width: 190px;
+  box-sizing: border-box;
+  margin-left: 4px ;
+  margin-right: 4px ;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* .radial-bar {
+  padding-left: 50px;
+} */
+
+.circle-inner {
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+/* circlr-stuff */
+
+/* start */
+.radial-chart {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease-in;
+}
+.radial-chart.no-progress .radial-chart-progress {
+  opacity: 0;
+}
+.radial-chart-total {
+  opacity: 0.3;
+}
+.radial-chart-progress {
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: all 0.6s cubic-bezier(0.58, 0.16, 0.5, 1.14);
+  transition-delay: 0.3s;
+}
+/* end */
+
+.circular-would-recommend {
+  font-weight: bold ;
+  font-size: 16px;
+  text-align: center;
+}
+
+.circular-recommended {
+  font-size: 14px;
+  text-align: center;
+}
+
+
+
+
+/* css for SORTING REVIEWS */
+
+.sorting-reviews{
+  background-color: rgb(247, 247, 247);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+  align-items: center ;
+  padding: 16px ;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  margin: 20px 0px 20px 0px;
+}
+
+.sort-by-date {
+  width: 234px;
+  height: 44px;
+  margin-right: 16px;
+  margin-bottom: 0px;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex: 0 0 auto;
+}
+
+.dropdown {
+  width: 100%;
+  height: 100%;
+  justify-content: left;
+  display: flex !important;
+  font-family: "Helvetica for Target", HelveticaForTarget, Targetica, "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.42857;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0px;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+  touch-action: manipulation;
+  background-image: none;
+  user-select: none;
+  text-overflow: ellipsis;
+  height: 44px;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border-width: 1px;
+  border-style: solid;
+  overflow: hidden;
+  padding: 0px 12px;
+  margin: 0px;
+  border-radius: 4px;
+  border-color: rgb(136, 136, 136);
+}
+
+.dropdown:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(51, 51, 51);
+ }
+
+ .dropdown:hover{
+  color: rgb(51, 51, 51);
+  background-color: rgb(247, 247, 247);
+  border-color: rgb(51, 51, 51);
+  text-decoration: none;
+}
+
+/* css for sort by photos */
+
+.sort-by-photos {
+  box-sizing: border-box;
+  /* margin-left: 550px; */
+  margin-left: auto;
+  border-right-color: inherit;
+  flex-direction: row;
+  display: inline;
+  -webkit-box-flex: 1;
+  flex: 0 0 auto;
+  background-color: rgb(247, 247, 247);
+}
+
+.checkbox-display {
+  display: flex;
+  flex-direction: column;
+  background-color:  rgb(247, 247, 247);
+}
+
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+.checkbox-display input[type=checkbox] {
+  display: none;
+}
+
+.checkbox-display input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+}
+
+.checkbox-display input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+.checkbox-display input[type=checkbox]:checked + label:before {
+  background-color: rgb(204, 0, 0);
+  border-color: rgb(204, 0, 0);
+  color: #fff;
+}
+
+.checkbox-display input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+.checkbox-display input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: rgb(204, 0, 0);
+  border-color: rgb(204, 0, 0);
+}
+
+
+/* css for total reviews text */
+
+.total-reviews {
+  padding-left: 32px;
+  font-size: 16px;
+}
+
+
+
+ /* radio btn */
+
+ input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: rgb(204, 0, 0);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+
+
+/* css for form */
+
+.review-content{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+.form-item {
+  flex-direction: row;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+.review-textare {
+  padding-top: 30px;
+}
+
+.review-textare textarea {
+  background-color: rgb(255, 245, 235);
+  border-color: rgb(232, 105, 0);
+  border-radius: 0px;
+  border-width: 1px;
+  border-style: solid;
+  padding: 9px 12px;
+  margin: 0px;
+}
+
+.review-title {
+  margin-top: 18px;
+}
+
+.review-title  input{
+  background-color: rgb(255, 245, 235);
+  border-color: rgb(232, 105, 0);
+  border-radius: 0px;
+  border-width: 1px;
+  border-style: solid;
+  height: 20px;
+  padding: 9px 12px;
+  margin: 0px;
+}
+
+.review-customer-name {
+  padding-top: 20px;
+}
+
+.review-customer-name input{
+  background-color: rgb(255, 245, 235);
+  border-color: rgb(232, 105, 0);
+  border-radius: 0px;
+  border-width: 1px;
+  border-style: solid;
+  height: 20px;
+  padding: 9px 12px;
+  margin: 0px;
+}
+
+
+.review-list ul {
+  padding-inline-start: 0px;
+}
+
+.form-rating {
+  float: left;
+}
+
+.cancel-submit-button button {
+  position: relative;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  user-select: none;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.42857;
+  color: rgb(80, 80, 80);
+  background-color: rgb(247, 247, 247);
+  border-width: 1px;
+  border-style: solid;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border-color: rgb(214, 214, 214);
+}
