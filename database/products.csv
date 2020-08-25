@@ -1,0 +1,101 @@
+item_id,category_id,item_name
+1,1,Granny Smith Apples - 3lb Bag - Good & Gather™
+2,1,Pink Lady Apple -each
+3,1,Spam Original Lunch Meat 12oz
+4,1,Russet Potatoes 5lb bag
+5,1,Lay's Classic Potato Chips 8 oz
+6,1,Blue Bell Vanilla Ice Cream Cups
+7,1,DiGiorno Rising Crust Pepperoni Frozen Pizza
+8,1,Kraft Macaroni & Cheese Dinner Original -7.25oz
+9,1,Oscar Mayer Center Cut Original Bacon -12oz
+10,1,Chicken Caesar Salad Bowl -6.25oz- Good & Gather
+11,1,Lindt Lindor Assorted Chocolate Truffles -6oz
+12,1,Sour Patch Kids Assorted Soft & Cherwy Candy -30.4oz
+13,1,Dynasty Jasmine Rice 32oz
+14,1,Maruchan Ramen Noodle Soup Mix with Chicken Flavor
+15,1,Eggland's Best Cage-Free Grade A Large Brown Eggs - 12ct
+16,1,Bimbo Soft White Bread - 20oz
+17,1,FIJI Natural Artesian Water - 6pk/16.9 fl oz Bottles
+18,1,Coca-Cola - 12pk/12 fl oz Cans
+19,1,Corona Extra Lager Beer - 12pk/12 fl oz Bottles
+20,1,Chips Ahoy! Original Chocolate Chip Cookies -13oz
+21,2,OXO Softworks Corkscrew
+22,2,Oster Classic Series 5-Speed Blender - Black BLSTCP-B00-000
+23,2,Sunbeam 2 Slice Wide-Slot Toaster - Brushed Stainless Steel TSSBTRSB04
+24,2,KitchenAid Variable-speed Cordless Hand Blender
+25,2,Chefman 3.7qt Digital Air Fryer
+26,2,Takeya Flash Chill Iced Tea Maker
+27,2,NutriBullet Blender Combo
+28,2,Set of 4 Coasters Natural Acacia with Gold Metal - Threshold
+29,2,Cravings by Chrissy Teigen 13.28oz Mini Cast-Iron Dutch Oven
+30,2,Lodge 6qt Cast Iron Enamel Dutch Oven
+31,2,Calphalon Premier Hard Anodized Nonstick Space Saving Fry Pan Combo
+32,2,Calphalon Premier 10pc Hard Anodized Nonstick Space Saving Cookware Set
+33,2,Stoneware Sugar Cellar Cream - Hearth & Hand™ with Magnolia
+34,2,Set of 4 Natural Acacia Dip Bowls - Threshold
+35,2,Cheese Slicer Marble/Wood
+36,2,Set of 4 Cheese Knives Marble White
+37,2,Farberware 15pc Stainless Steel Knife Block Set
+38,2,Pryce Silverware Set 20-pc. Stainless Steel
+39,2,Spectrum Euro Fruit Tree
+40,2,Telford Tumbler 12pc Glass Tumblers
+41,3,"Samsung QN43LS03T 43"" The Frame QLED 4K UHD Smart TV"
+42,3,"LG 24"" Class 720p 60Hz LED HDTV - 24LF454B"
+43,3,"VIZIO D-Series 40"" Class (39.50"" Diag.) 1080p Full-Array LED Smart HDTV - D40f-G9"
+44,3,Apple AirPods Pro
+45,3,Bose QuietComfort 35 Wireless Headphones II
+46,3,Bose SoundSport Free True Wireless Earbuds
+47,3,New Powerbeats Wireless Earphones
+48,3,PlayStation 4 1TB Console
+49,3,NBA 2K21: Mamba Forever Edition - PlayStation 4
+50,3,Call of Duty: Modern Warfare - PlayStation 4
+51,3,Cyberpunk 2077 - PlayStation 4
+52,3,Marvel's Avengers - PlayStation 4
+53,3,"LG 27GN750-B 27 UltraGear 16:9 240Hz Full HD IPS Gaming Monitor with NVIDIA G-Sync Compatible & Adaptive-Sync, HDR 10"
+54,3,"HP 27"" LED Computer Monitor (X3W26AA_ABA)"
+55,3,"HP 24"" LED Computer Monitor (1LU21AA_ABA)"
+56,3,Thermaltake Riing Plus 14 RGB Software Enabled 140mm Case Fan
+57,3,Thermaltake Matrix Magnetic Fan Filter
+58,3,TCL ALTO 5+ 2.1 Channel Sound Bar
+59,3,Amazon Fire TV Stick with 4K Ultra HD Streaming Media Player and Alexa Voice Remote (2nd Generation)
+60,3,Roku Streaming Stick+ Black (3810R)
+61,4,Small Foot Wooden Toys Smack the Bird Knock Playset with Hammer
+62,4,Transformers Studio Series 68 Deluxe Movie 3 Leadfoot (Target Exclusive)
+63,4,Marvel Legends Deadpool's Head Premium Interactive Head
+64,4,WWE Wrekkin Slambulance
+65,4,"It (2017) Ultimate Well House Pennywise 7"" Action Figure"
+66,4,"Cabbage Patch Kids 9"" Deluxe Splash N' Float - Brown Eye Girl Unicorn"
+67,4,Cry Babies Kristal Gets Sick & Feels Better
+68,4,Squishy Human Body Anatomy Kit
+69,4,Thames & Kosmos Gross Gummy Candy Lab
+70,4,Creativity for Kids Grow N' Glow Terrarium
+71,4,B. toys Toy Drum Set 7 Instruments - Parum Pum Pum
+72,4,VTech Mix And Match-a-Saurus
+73,4,Star Wars Walkie Talkies
+74,4,Mira Royal Detective on the Case Detective Set
+75,4,Melissa & Doug Deluxe Solid-Wood Magic Set With 10 Classic Tricks
+76,4,L.O.L. Surprise! Winter Disco Cottage Playhouse
+77,4,KidKraft Ocean Front Playhouse
+78,4,Melissa & Doug Food Truck Indoor Corrugate Playhouse (Over 4' Long)
+79,4,Mega Bloks CAT Large Dump Truck Construction Set
+80,4,Mega Bloks GJD22 Junior Builder Mini Bulk Tub 180 Piece Large Block Building Set
+81,5,Lemon & Mint Glass Cleaner - 28 fl oz - Everspring™
+82,5,Windex Ammonia Free Glass Cleaners - 26oz
+83,5,Mrs. Meyer's Lavender Glass Cleaner - 24 fl oz
+84,5,Seventh Generation Sparkling Sea Glass Cleaner - 23oz
+85,5,Method Citron Antibacterial All Purpose Spray - 28 fl oz
+86,5,Clorox Disinfecting Bathroom Cleaner Spray Bottle 30 oz
+87,5,CloroxToilet Bowl Cleaner Clinging Bleach Gel - Cool Wave
+88,5,Seventh Generation Emerald Cypress & Fir Toilet Bowl Cleaner - 32oz
+89,5,Swiffer Sweeper Dry + Wet All Purpose Floor Mopping and Cleaning Starter Kit with Heavy Duty Cloths - Includes 1 Mop - 10 Refills
+90,5,Swiffer WetJet Floor Mop Starter Kit 1 Power Mop 5 Mopping Pads 1 Floor Cleaner Liquid Solution
+91,5,Arm & Hammer Carpet Odor Eliminator - Pet Fresh - 42.6oz
+92,5,O-Cedar EasyWring Spin Mop and Bucket System
+93,5,Libman Large Precision Angle Broom with Dustpan
+94,5,Gain flings! Laundry Detergent Pacs Original + Original In-Wash Scent Booster - Bundle
+95,5,Tide Original Liquid Laundry Detergent - 92 fl oz
+96,5,All Ultra Free Clear HE Liquid Laundry Detergent - 141oz
+97,5,Bounce Outdoor Fresh Dryer Sheets - 250ct
+98,5,Gain Original Dryer Sheets - 105ct
+99,5,Dyson Slim Ball Animal Upright Vacuum
+100,5,iRobot Roomba 675 Wi-Fi Connected Robot Vacuum
