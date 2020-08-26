@@ -60,6 +60,11 @@ app.post('/add-review', (req, res) => {
   );
 });
 
+// handle put request to update a review
+
+// handle delete review
+
+
 // listen to port
 app.listen(port, () => {
   console.log(`Listening to port ${port}`);

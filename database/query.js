@@ -12,6 +12,7 @@ connection.connect((err) => {
   }
 });
 
+// get product by ID
 const getProducts = (itemId, callback) => {
   connection.query(
     'SELECT * FROM products WHERE item_id=?',
@@ -27,6 +28,7 @@ const getProducts = (itemId, callback) => {
   );
 };
 
+// get all reviews
 const getReviews = (callback) => {
   connection.query('SELECT * FROM reviews', (err, data) => {
     if (err) {
@@ -38,6 +40,7 @@ const getReviews = (callback) => {
   });
 };
 
+// get reviews by product id
 const getReviewsByID = (itemId, callback) => {
   connection.query(
     'SELECT * FROM reviews WHERE item_id=?',
@@ -53,7 +56,7 @@ const getReviewsByID = (itemId, callback) => {
   );
 };
 
-// inserting multiple queries
+// add a new review to the database
 const postReview = (name, title, review, rating, id, callback) => {
   connection.query(
     `INSERT INTO reviews (customer_name, review_title, review, rating, item_id) VALUES ('${name}','${title}','${review}', '${rating}','${id}');
@@ -75,6 +78,10 @@ const postReview = (name, title, review, rating, id, callback) => {
     },
   );
 };
+
+// Update
+
+// Delete
 
 module.exports = {
   getReviews, postReview, getProducts, getReviewsByID,
