@@ -42,6 +42,7 @@
     "node": "^14.7.0",
     "nodemon": "^2.0.4",
     "path": "^0.12.7",
+    "pg": "^8.3.3",
     "rc-progress": "^3.0.0",
     "react": "^16.13.1",
     "react-chart-histogram": "^0.2.4",
