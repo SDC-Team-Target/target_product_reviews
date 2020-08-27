@@ -79,10 +79,35 @@ const postReview = (name, title, review, rating, id, callback) => {
   );
 };
 
-// Update
+// Update review in db by review_id
+const updateReview = (reviewID, name, title, review, rating, callback) => {
+  connection.query(
+    `UPDATE reviews SET rating = '${rating}', customer_name = '${name}', review_title = '${title}', review = '${review}'
+    WHERE review_id=?;`, [reviewID],
+    (err, data) => {
+      if (err) {
+        console.log(`problem updating review in database`);
+        callback(err, null);
+      } else {
+        callback(null, data);
+      }
+    },
+  );
+};
 
-// Delete
+// Delete review by id
+const deleteReview = (reviewID, callback) => {
+  connection.query(`DELETE FROM reviews WHERE review_id=?`,[reviewID], (err, data) => {
+    if (err) {
+      console.log(`problem deleting review from database`);
+      callback(err, null);
+    } else {
+      callback(null, data);
+    }
+  },
+  );
+};
 
 module.exports = {
-  getReviews, postReview, getProducts, getReviewsByID,
+  getReviews, postReview, getProducts, getReviewsByID, updateReview, deleteReview
 };

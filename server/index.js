@@ -6,6 +6,8 @@ const {
   postReview,
   getProducts,
   getReviewsByID,
+  updateReview,
+  deleteReview
 } = require('../database/query');
 
 const app = express();
@@ -60,9 +62,37 @@ app.post('/add-review', (req, res) => {
   );
 });
 
-// handle put request to update a review
+// handle put request to update a review by review_id
+app.put('/update-review/:review_id', (req, res) => {
+  updateReview(
+    req.params.review_id,
+    req.body.customer_name,
+    req.body.review_title,
+    req.body.review,
+    req.body.rating,
+    (err, data) => {
+      if (err) {
+        console.log(`problem updating review by id`);
+        res.sendStatus(500);
+      } else {
+        res.send(data);
+      }
+    },
+  );
+});
 
 // handle delete review
+app.delete('/delete-review/:review_id', (req, res) => {
+  deleteReview(req.params.review_id, (err, data) => {
+    if (err) {
+      console.log(`problem deleting review by id`);
+      res.sendStatus(500);
+    } else {
+      res.send(data);
+    }
+  },
+  );
+});
 
 
 // listen to port
