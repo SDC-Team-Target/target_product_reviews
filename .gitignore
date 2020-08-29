@@ -1,3 +1,4 @@
 node_modules
 /database/config.js
 /database/pg_config.js
+/reviewData.js
