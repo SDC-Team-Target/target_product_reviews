@@ -16,6 +16,11 @@ mongoose.connect('mongodb://localhost/SDC_reviews', { useNewUrlParser: true, use
   .then((result) => console.log(`Connected to Mongodb`))
   .catch((err) => console.log(err))
 
+
+
+
+
+// BEGIN LEGACY CODE
 // SQL connection
 // const {
 //   postReview,

@@ -12,11 +12,11 @@ const writeTenMillionReviews = (writer, encoding, callback) => {
     do {
       i -= 1;
       id += 1;
-      const reviewID = faker.random.number({ min: 1, max: 10000000 });
+      const reviewID = id;
       const customerName = faker.internet.userName();
       const reviewTitle = faker.commerce.productAdjective();
       const reviewText = faker.lorem.sentence();
-      const productID = faker.random.number({ min: 1, max: 10000000 });
+      const productID = id;
       const rating = faker.random.number({ min: 1, max: 5 })
       const date = faker.date.recent();
 
