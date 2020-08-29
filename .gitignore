@@ -1,4 +1,4 @@
 node_modules
 /database/config.js
 /database/pg_config.js
-*.csv
+reviewData.csv
