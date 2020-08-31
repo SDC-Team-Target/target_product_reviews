@@ -2,7 +2,9 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
-const mongoose = require('mongoose');
+const MongoClient = require('mongodb').MongoClient
+const pgConnectionString = require('../database/pg_config');
+const { Client } = require('pg');
 
 const app = express();
 const port = 8080;
@@ -12,12 +14,19 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb://localhost/SDC_reviews', { useNewUrlParser: true, useUnifiedTopology: true })
+// Mongodb connection
+MongoClient.connect('mongodb://localhost/SDC_reviews', { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => console.log(`Connected to Mongodb`))
   .catch((err) => console.log(err))
 
+// Postgres connection
+const client = new Client({
+    connectionString: pgConnectionString.connectionString
+});
 
-
+client.connect()
+.then(() => console.log('Connected to pg db!'))
+.catch(err => console.log(err))
 
 
 // BEGIN LEGACY CODE
