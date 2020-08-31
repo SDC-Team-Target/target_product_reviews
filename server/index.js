@@ -29,7 +29,7 @@ client.connect()
 .catch(err => console.log(err))
 
 
-// BEGIN LEGACY CODE
+// BEGIN LEGACY CODE - MySQL db
 // SQL connection
 // const {
 //   postReview,
