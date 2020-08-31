@@ -15,16 +15,32 @@ app.use(express.json());
 app.use(cors());
 
 // Mongodb connection
+var db, reviewsCollection;
 MongoClient.connect('mongodb://localhost/SDC_reviews', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then((result) => console.log(`Connected to Mongodb`))
+  .then((client) => {
+    db = client.db('SDC_reviews');
+    reviewsCollection = db.collection('reviews');
+    console.log(`Connected to Mongodb`)
+  })
   .catch((err) => console.log(err))
 
+// get review by productID
+app.get(`/review/:productID`, (req, res) => {
+  let productIDNum = parseInt(req.params.productID);
+  reviewsCollection.findOne({ productID: productIDNum })
+  .then(result => {
+      console.log(`Successfully found document by productID: ${productIDNum}`);
+      res.status(200).send(result);
+  })
+  .catch(err => console.error(`Failed to find document: ${err}`));
+})
+
 // Postgres connection
-const client = new Client({
+const pgClient = new Client({
     connectionString: pgConnectionString.connectionString
 });
 
-client.connect()
+pgClient.connect()
 .then(() => console.log('Connected to pg db!'))
 .catch(err => console.log(err))
 
