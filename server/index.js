@@ -27,12 +27,28 @@ MongoClient.connect('mongodb://localhost/SDC_reviews', { useNewUrlParser: true, 
 // get review by productID
 app.get(`/review/:productID`, (req, res) => {
   let productIDNum = parseInt(req.params.productID);
-  reviewsCollection.findOne({ productID: productIDNum })
+  reviewsCollection.find({ productID: productIDNum }).toArray()
   .then(result => {
       console.log(`Successfully found document by productID: ${productIDNum}`);
       res.status(200).send(result);
   })
   .catch(err => console.error(`Failed to find document: ${err}`));
+})
+
+// create a new review
+app.post(`/review`, (req, res) => {
+  reviewsCollection.insertOne({
+    customerName: req.body.customer_name,
+    reviewTitle: req.body.review_title,
+    reviewText: req.body.review,
+    rating: req.body.rating,
+    productID: req.body.item_id
+  })
+  .then(result => {
+    console.log(`Successfully submitted review`);
+    res.status(200).send(result);
+  })
+  .catch(err => console.error(`Failed to submit review: ${err}`));
 })
 
 // Postgres connection
