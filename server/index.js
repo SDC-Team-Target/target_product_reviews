@@ -29,10 +29,21 @@ app.get(`/reviews/:productID`, (req, res) => {
   let productIDNum = parseInt(req.params.productID);
   reviewsCollection.find({ productID: productIDNum }).toArray()
   .then(result => {
-      console.log(`Successfully found document by productID: ${productIDNum}`);
+      console.log(`Successfully found document(s) by productID: ${productIDNum}`);
       res.status(200).send(result);
   })
-  .catch(err => console.error(`Failed to find document: ${err}`));
+  .catch(err => console.error(`Failed to find documents: ${err}`));
+})
+
+// search reviews by query for customerName
+app.get(`reviews/:query`, (req, res) => {
+  let query = req.params.query
+  reviewsCollection.find({ $text: { $search: query} }).toArray()
+  .then(result => {
+      console.log(`Successfully found document(s) by customerName: ${query}`);
+      res.status(200).send(result);
+  })
+  .catch(err => console.error(`Failed to find documents by customerName query: ${err}`));
 })
 
 // create a new review

@@ -30,7 +30,7 @@ class App extends React.Component {
     };
 
     // function binding
-    this.getProducts = this.getProducts.bind(this);
+    // this.getProducts = this.getProducts.bind(this);
     this.getReview = this.getReview.bind(this);
     this.changeHandler = this.changeHandler.bind(this);
     this.submitHandler = this.submitHandler.bind(this);
@@ -42,7 +42,7 @@ class App extends React.Component {
   // Invokes function immediately after a component is mounted
   componentDidMount() {
     this.getReview();
-    this.getProducts();
+    // this.getProducts();
   }
 
   // function for star review component
