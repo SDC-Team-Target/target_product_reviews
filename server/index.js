@@ -25,7 +25,7 @@ MongoClient.connect('mongodb://localhost/SDC_reviews', { useNewUrlParser: true, 
   .catch((err) => console.log(err))
 
 // get review by productID
-app.get(`/review/:productID`, (req, res) => {
+app.get(`/reviews/:productID`, (req, res) => {
   let productIDNum = parseInt(req.params.productID);
   reviewsCollection.find({ productID: productIDNum }).toArray()
   .then(result => {

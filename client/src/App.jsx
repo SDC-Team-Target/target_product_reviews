@@ -51,21 +51,21 @@ class App extends React.Component {
   }
 
   // Axios request to get the products from the server
-  getProducts(item_id = this.state.item_id) {
-    axios.get(`http://ec2-52-14-146-214.us-east-2.compute.amazonaws.com:8080/products/${item_id}`)
-      .then((res) => {
-        this.setState({
-          products: res.data,
-        });
-      })
-      .catch((err) => {
-        console.log('Error getitng the products from client', err);
-      });
-  }
+  // getProducts(item_id = this.state.item_id) {
+  //   axios.get(`http://ec2-52-14-146-214.us-east-2.compute.amazonaws.com:8080/products/${item_id}`)
+  //     .then((res) => {
+  //       this.setState({
+  //         products: res.data,
+  //       });
+  //     })
+  //     .catch((err) => {
+  //       console.log('Error getitng the products from client', err);
+  //     });
+  // }
 
   // Axios request to get the reviews from the server
   getReview(item_id = this.state.item_id) {
-    axios.get(`http://ec2-52-14-146-214.us-east-2.compute.amazonaws.com:8080/reviews/${item_id}`)
+    axios.get(`/reviews/${item_id}`)
       .then((res) => {
         this.setState({
           reviews: res.data,
@@ -105,7 +105,7 @@ class App extends React.Component {
   // function to update the state once the form is submitted
   submitHandler(e) {
     e.preventDefault();
-    axios.post('http://ec2-52-14-146-214.us-east-2.compute.amazonaws.com:8080/add-review', {
+    axios.post(`/review`, {
       customer_name: this.state.customerName,
       review_title: this.state.title,
       review: this.state.review,
