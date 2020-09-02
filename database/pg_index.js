@@ -1,11 +1,24 @@
+const pgConnectionString = require('./pg_config');
 const { Client } = require('pg');
-const pgConfig = require('./pg_config');
 
-const client = new Client(pgConfig);
+//Postgres connection
+const pgClient = new Client({
+    connectionString: pgConnectionString.connectionString
+});
 
-client.connect()
+pgClient.connect()
 .then(() => console.log('Connected to pg db!'))
 .catch(err => console.log(err))
+
+// const getReviewsByProdID = (err, results) => {
+//   pg.Client.query(`SELECT * FROM reviews WHERE prodid =($1)`)
+//   const escape
+//   return
+// }
+// pgClient.query
+
+
+// module.exports = { // function names };
 
 // CREATE TABLE public.reviews
 // (

@@ -3,11 +3,10 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient
-// const pgConnectionString = require('../database/pg_config');
-// const { Client } = require('pg');
+// const { pgClient } = require('../database/pg_index');
 
 const app = express();
-const port = 8080;
+const port = 3000;
 
 // connect to the client
 app.use(express.static(path.join(__dirname, '../client/dist')));
@@ -61,16 +60,6 @@ app.post(`/review`, (req, res) => {
   })
   .catch(err => console.error(`Failed to submit review: ${err}`));
 })
-
-// Postgres connection
-// const pgClient = new Client({
-//     connectionString: pgConnectionString.connectionString
-// });
-
-// pgClient.connect()
-// .then(() => console.log('Connected to pg db!'))
-// .catch(err => console.log(err))
-
 
 // BEGIN LEGACY CODE - MySQL db
 // SQL connection
