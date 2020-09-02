@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
+const newrelic = require('newrelic')
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient
-require('newrelic');
 // const pgConnectionString = require('../database/pg_config');
 // const { Client } = require('pg');
 
