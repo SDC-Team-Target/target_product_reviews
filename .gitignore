@@ -3,3 +3,4 @@ node_modules
 /database/pg_config.js
 reviewData.csv
 newrelic.js
+nrdiag
