@@ -3,8 +3,8 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient
-const pgConnectionString = require('../database/pg_config');
-const { Client } = require('pg');
+// const pgConnectionString = require('../database/pg_config');
+// const { Client } = require('pg');
 
 const app = express();
 const port = 8080;
@@ -35,10 +35,10 @@ app.get(`/reviews/:productID`, (req, res) => {
   .catch(err => console.error(`Failed to find documents: ${err}`));
 })
 
-// search reviews by query for customerName
+// search reviews by query for customerName and return first 10 results
 app.get(`reviews/:query`, (req, res) => {
   let query = req.params.query
-  reviewsCollection.find({ $text: { $search: query} }).toArray()
+  reviewsCollection.find({ $text: { $search: query} }).limit(10).toArray()
   .then(result => {
       console.log(`Successfully found document(s) by customerName: ${query}`);
       res.status(200).send(result);
@@ -63,13 +63,13 @@ app.post(`/review`, (req, res) => {
 })
 
 // Postgres connection
-const pgClient = new Client({
-    connectionString: pgConnectionString.connectionString
-});
+// const pgClient = new Client({
+//     connectionString: pgConnectionString.connectionString
+// });
 
-pgClient.connect()
-.then(() => console.log('Connected to pg db!'))
-.catch(err => console.log(err))
+// pgClient.connect()
+// .then(() => console.log('Connected to pg db!'))
+// .catch(err => console.log(err))
 
 
 // BEGIN LEGACY CODE - MySQL db
