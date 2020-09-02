@@ -36,7 +36,7 @@ app.get(`/reviews/:productID`, (req, res) => {
 })
 
 // search reviews by query for customerName and return first 10 results
-app.get(`reviews/:query`, (req, res) => {
+app.get(`reviews/customerName/:query`, (req, res) => {
   let query = req.params.query
   reviewsCollection.find({ $text: { $search: query} }).limit(10).toArray()
   .then(result => {
