@@ -7,8 +7,6 @@ export const options = {
     { duration: '30s', target: 500 },
     { duration: '30s', target: 1000 },
     { duration: '10m', target: 1000 },
-    { duration: '30s', target: 1500 },
-    { duration: '10m', target: 1500 },
     { duration: '30s', target: 250 }
   ]
 };
