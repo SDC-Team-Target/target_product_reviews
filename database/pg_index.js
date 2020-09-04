@@ -1,12 +1,10 @@
-const pgConnectionString = require('./pg_config');
-const { Client } = require('pg');
+const connection = require('./pg_config');
+const { Pool } = require('pg');
 
 //Postgres connection
-const pgClient = new Client({
-    connectionString: pgConnectionString.connectionString
-});
+const pool = new Pool({ connection });
 
-pgClient.connect()
+pool.connect()
 .then(() => console.log('Connected to pg db!'))
 .catch(err => console.log(err))
 

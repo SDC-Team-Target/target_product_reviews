@@ -3,7 +3,6 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient
-// const { pgClient } = require('../database/pg_index');
 
 const app = express();
 const port = 3000;
@@ -23,7 +22,7 @@ MongoClient.connect('mongodb://localhost/SDC_reviews', { useNewUrlParser: true, 
   })
   .catch((err) => console.log(err))
 
-// get review by productID
+// get reviews by productID
 app.get(`/reviews/:productID`, (req, res) => {
   let productIDNum = parseInt(req.params.productID);
   reviewsCollection.find({ productID: productIDNum }).toArray()
