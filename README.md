@@ -11,9 +11,8 @@ For this project I extended the capabilites of inherited code with a focus of su
   * Maintained Error rate less than 1% under load
 
 
-## Technology:
-  * Mongo DB, Mongoose,
-  * Express, Node, 
-  * K6, New Relic
+## Technologies:
+  * Back end: Express, Node, Mongo DB
+  * Load Testing & Benchmarking: K6, New Relic
 
 
